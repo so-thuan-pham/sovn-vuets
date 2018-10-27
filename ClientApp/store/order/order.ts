@@ -20,7 +20,7 @@ export const actions = {
 }
 
 //mutations
- export const mutations = {
+export const mutations = {
     insertOrder: b.commit(OrderMutations.insertOrder),
     insertOrder1: b.commit(OrderMutations.insertOrder2),
     deleteOrder: b.commit(OrderMutations.deleteOrder)

@@ -7,7 +7,6 @@ export const newOrder = function newOrder(context: BareActionContext<OrderModule
     mutations.insertOrder(payload);
 }
 
-
 export const deleteOrder = function deleteOrder(context: BareActionContext<OrderModule.OrderState, RootState>, payload: OrderModule.Order) {
     mutations.deleteOrder(payload);
 }

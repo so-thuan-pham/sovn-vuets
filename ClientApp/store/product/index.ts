@@ -1,4 +1,10 @@
+export interface ProductState {
+    products: Product[],
+}
+
+
 export interface Product {
     id: number,
-    name: string
+    name: string,
+    price: number
 }
