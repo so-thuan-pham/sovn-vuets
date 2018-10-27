@@ -8,7 +8,7 @@ const state: OrderState = {
     orders: [] as Order[],
 }
 
-export const b = storeBuilder.module<OrderModule.OrderState>("order", state);
+export const b = storeBuilder.module<OrderState>("order", state);
 const stateGetter = b.state();
 
 //getters
@@ -20,7 +20,7 @@ export const actions = {
 }
 
 //mutations
- const mutations = {
+ export const mutations = {
     insertOrder: b.commit(OrderMutations.insertOrder),
     insertOrder1: b.commit(OrderMutations.insertOrder2),
     deleteOrder: b.commit(OrderMutations.deleteOrder)
