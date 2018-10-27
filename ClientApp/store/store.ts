@@ -1,10 +1,7 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
+import Vuex, { Store } from 'vuex';
+import { getStoreBuilder } from "vuex-typex";
+import { RootState } from './rootstate';
 
 Vue.use(Vuex);
-
-export const store = new Vuex.Store({
-    state: {
-        counter: 0
-    }
-})
+export const storeBuilder = getStoreBuilder<RootState>();

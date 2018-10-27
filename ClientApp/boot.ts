@@ -3,7 +3,9 @@ import 'bootstrap';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import { store } from './store/store';
+import { storeBuilder } from './store/store';
+import { Store } from 'vuex';
+import { RootState } from './store/rootstate';
 
 Vue.use(VueRouter);
 
@@ -13,6 +15,8 @@ const routes = [
     { path: '/fetchdata', component: require('./components/fetchdata/fetchdata.vue.html') },
     { path: '/counter2', component: require('./components/counter2/app.vue.html') }
 ];
+
+const store: Store<RootState> = storeBuilder.vuexStore();
 
 new Vue({
     el: '#app-root',
